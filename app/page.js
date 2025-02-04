@@ -1,16 +1,42 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-    <header className="bg-green-800 text-white py-4">
-      <div className="container mx-auto px-4">
-        <h1 className="text-3xl md:text-4xl font-bold text-center">مدرسہ عبداللہ بن مسعود</h1>
-        <p className="text-center mt-2">Spreading knowledge and compassion since 1985</p>
+   <header className="bg-green-800 text-white py-4">
+      <div className="container mx-auto px-4 flex items-center justify-between">
+        <Link href="/" className="flex items-center">
+          <span className="ml-2 text-xl font-bold">مدرسہ عبداللہ بن مسعود</span>
+        </Link>
+        <nav>
+          <ul className="flex space-x-4">
+            <li>
+              <Link href="/" className="hover:text-green-300">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" className="hover:text-green-300">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className="hover:text-green-300">
+                What we do
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-green-300">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
